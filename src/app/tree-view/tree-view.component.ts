@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import 'leader-line';
 
 declare let LeaderLine: any;
@@ -8,7 +8,7 @@ declare let LeaderLine: any;
   templateUrl: './tree-view.component.html',
   styleUrls: ['./tree-view.component.css']
 })
-export class TreeViewComponent implements OnInit {
+export class TreeViewComponent implements AfterViewInit {
 
   constructor() {
   }
@@ -29,7 +29,7 @@ export class TreeViewComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.drawLine('a_node', 'b_node');
     this.drawLine('a_node', 'c_node');
     this.drawLine('c_node', 'd_node');
