@@ -1,0 +1,38 @@
+<div class="flex flex-col">
+  <div [ngClass]="{ onHoverGreenBubble: isHover && +bubbleData['primaryKPI'] >= 0,
+        onHoverRedBubble: isHover && +bubbleData['primaryKPI'] < 0,
+        staticBubble:  !isHover}" class="directQueryBubble flex gap-1 flex-col items-center">
+
+    <!--        <img [src]="imgPath" *ngIf="(bubbleData['primaryKPI'] > 0) || (bubbleData['primaryKPI'] < 0)">-->
+    <div [ngClass]="{'noImage': !((bubbleData['primaryKPI'] > 0) || (bubbleData['primaryKPI'] < 0))}"
+         class="flex flex-col items-center">
+            <span [ngClass]="{ greenText: +bubbleData['primaryKPI'] > 0 && !isHover,
+            redText: +bubbleData['primaryKPI'] < 0 && !isHover}" class="primaryKPI">
+                {{bubbleData['primaryKPI']}}
+            </span>
+
+      <span [ngClass]="{ greenText: +bubbleData['primaryKPI'] > 0 && !isHover,
+            redText: +bubbleData['primaryKPI'] < 0 && !isHover}" class="primaryUnit">
+                {{bubbleData['primaryUnit']}}
+            </span>
+    </div>
+
+    <span *ngIf="!isHover" class="secondaryKPI pt-1">
+            {{bubbleData['secondaryKPI']}}
+      {{bubbleData['secondaryUnit']}}
+        </span>
+    <div class="flex flex-col items-center">
+      <span [ngClass]="{'pt-1 lightText': isHover}" class="label1">{{bubbleData['label1']}}</span>
+
+      <span [ngClass]="{lightText: isHover}" class="label2">{{bubbleData['label2']}}</span>
+    </div>
+    <span *ngIf="isHover" class="secondaryKPI lightText ">
+            {{bubbleData['secondaryKPI']}}
+      {{bubbleData['secondaryUnit']}}
+        </span>
+
+  </div>
+  <!--    <div class="flex justify-center mt-1 text-center" style="background-color: #EAF1FD;width: 200px">-->
+  <!--        IRI to Mar'3-->
+  <!--    </div>-->
+</div>

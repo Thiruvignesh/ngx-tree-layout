@@ -1,0 +1,122 @@
+/* Bubble CSS */
+
+.directQueryBubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  /* position: absolute; */
+  width: 150px;
+  height: 150px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* 1dp */
+
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
+  border-radius: 2000px;
+  overflow: hidden;
+  color: #000000
+}
+
+.staticBubble .label1, .staticBubble .label2 {
+  /*color: #222222;*/
+  color: rgba(0, 0, 0, 0.60)
+
+}
+
+.onHoverGrey {
+  /*color: #222222;*/
+  color: rgba(0, 0, 0, 0.60)
+
+}
+
+.onHoverGreenBubble {
+  background: #00a889;
+  color: #FFFFFF;
+}
+
+.onHoverRedBubble {
+  background: #ff544f;
+  color: #FFFFFF;
+}
+
+.primaryKPI {
+  font-family: Unilever Shilling;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+}
+
+.primaryUnit {
+  font-family: Unilever Shilling;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+}
+
+.greenText {
+  color: #00A889;
+}
+
+.redText {
+  color: #eb0000;
+}
+
+.secondaryKPI {
+  font-family: Unilever Shilling;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15.4px;
+  line-height: 19px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+}
+
+.lightText {
+  font-weight: 1;
+}
+
+.label1, .label2 {
+  font-family: Unilever Shilling;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+}
+
+.viewMore {
+  font-family: Unilever Shilling;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 10px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+  text-transform: uppercase;
+  color: #777777;
+}
+
+.noImage {
+  margin-top: 26px;
+}
+
+
+.numeratorBubble {
+  width: 170px;
+  padding-left: 15px;
+}
