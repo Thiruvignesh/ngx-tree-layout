@@ -1,0 +1,77 @@
+#frame {
+  /*margin: 64px;*/
+  width: 640px;
+  height: 640px;
+  /*overflow: scroll;*/
+}
+
+#container {
+  width: 480px;
+  height: 480px;
+  position: relative;
+  background-color: beige;
+}
+
+.terminal {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: blue;
+}
+
+#terminal-1 {
+  left: 32px;
+  top: 32px;
+}
+
+#terminal-2 {
+  left: 416px;
+  top: 320px;
+}
+
+#terminal-3 {
+  left: 64px;
+  top: 180px;
+}
+
+#wrapper {
+  width: 0;
+  height: 0;
+  position: relative; /* Origin of coordinates for lines, and scrolled content (i.e. not `absolute`) */
+}
+
+.tree {
+  display: grid;
+  width: 600px;
+  grid-template-areas:
+    'a a a'
+    'b c c'
+    '. d e';
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.node {
+  justify-self: center;
+  align-self: center;
+}
+
+#a {
+  grid-area: a;
+}
+
+#b {
+  grid-area: b;
+}
+
+#c {
+  grid-area: c;
+}
+
+#d {
+  grid-area: d;
+}
+
+#e {
+  grid-area: e;
+}
