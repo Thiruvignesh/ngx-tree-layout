@@ -23,6 +23,10 @@ export class WrappedLinesComponent implements AfterViewInit {
     // let elmLine1 = document.querySelector('.leader-line:last-of-type');
     // let line2 = new LeaderLine(document.getElementById('terminal-3'), line1.end);
     // let elmLine2 = document.querySelector('.leader-line:last-of-type');
+    let lineElement1 = this.drawLine('a_node', 'b_node');
+    let lineElement2 = this.drawLine('a_node', 'c_node');
+    let lineElement3 = this.drawLine('c_node', 'd_node');
+    let lineElement4 = this.drawLine('c_node', 'e_node');
 
 // Move to the origin of coordinates as the document
     this.renderer.setStyle(this.wrapperDiv.nativeElement, 'transform', 'translate(-' +
@@ -31,10 +35,10 @@ export class WrappedLinesComponent implements AfterViewInit {
     // elmWrapper?.appendChild(elmLine1);
     // elmWrapper?.appendChild(elmLine2);
 
-    this.drawLine('a_node', 'b_node');
-    this.drawLine('a_node', 'c_node');
-    this.drawLine('c_node', 'd_node');
-    this.drawLine('c_node', 'e_node');
+    elmWrapper?.appendChild(lineElement1);
+    elmWrapper?.appendChild(lineElement2);
+    elmWrapper?.appendChild(lineElement3);
+    elmWrapper?.appendChild(lineElement4);
 
   }
 
@@ -52,8 +56,8 @@ export class WrappedLinesComponent implements AfterViewInit {
         dash: {animation: true}
       }
     );
-    let elmLine = document.querySelector('.leader-line:last-of-type');
-    this.wrapperDiv.nativeElement?.appendChild(elmLine);
+    return document.querySelector('.leader-line:last-of-type');
+
   }
 
 }
